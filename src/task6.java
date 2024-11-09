@@ -12,7 +12,7 @@ public class task6 {
             System.out.println("10% endirim qazandiniz! Sizin odeyeceyiniz mebleg:  "
                     + (umumiMebleg - (0.1 * umumiMebleg))+"AZN");
         }else if (500 < umumiMebleg && 800 >= umumiMebleg) {
-            System.out.println("15% endirim qazandiniz! Sizin odeyeceyiniz mebleg:   " +
+            System.out.println("15% endirim qazandiniz! Sizin odeyeceyiniz mebleg:   "
                     + (umumiMebleg - (0.15 * umumiMebleg)) + "AZN");
         } else if (800 < umumiMebleg && 1000 >= umumiMebleg) {
             System.out.println("20% endirim qazandiniz! Sizin odeyeceyiniz mebleg:  "
