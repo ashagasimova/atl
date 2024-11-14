@@ -6,12 +6,6 @@ public class task12 {
         Scanner scanner = new Scanner(System.in);
         int eded = scanner.nextInt();
             System.out.println((eded/10) + " " + (eded%10));
-
-
-
-
-
-
     }
 
 }
