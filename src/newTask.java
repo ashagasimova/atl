@@ -3,13 +3,17 @@ import java.util.Scanner;
 public class newTask {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Eded daxil edin: ");
-        int eded = scanner.nextInt();
-        int n = 0;
-        while (eded!=0){
-            eded=eded/10;
-            n++;
-        }System.out.println(n);
-
+        while(true) {
+            System.out.println("Eded daxil edin, dayandirmaq ucun -1 yazin");
+            int eded1 = scanner.nextInt();
+            if(eded1==-1){
+                System.out.println("program bitdi");
+                break;
+            }
+            int f = 1;
+            for (var n = eded1; n > 0; n--) {
+                f *= n;
+            } System.out.println(f);
+        }
     }
 }
