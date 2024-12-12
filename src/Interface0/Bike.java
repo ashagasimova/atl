@@ -12,4 +12,10 @@ public class Bike implements Vehicle{
         System.out.println("The bike stopped");
 
     }
+
+    @Override
+    public String getFuelType() {
+        return "Elektrik";
+
+    }
 }

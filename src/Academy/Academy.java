@@ -3,6 +3,22 @@ package Academy;
 public class Academy {
     private String name;
     private String address;
+    private Student[] students;
+    private int studentCount;
+
+    public void addStudent(Student student){
+        if(studentCount==students.length){
+            Student[] newStudent =new Student[students.length+5];
+            for(int i=0;i<students.length; i++){
+                newStudent[i] = students[i];
+            }
+            students = newStudent;
+        }
+        students[studentCount] = student;  //yeni telebe daxill edir
+        studentCount++;
+        System.out.println(student.getName() + "telebe olaraq elave edildi") ;
+    }
+
 
 
     public void displayInfo(){

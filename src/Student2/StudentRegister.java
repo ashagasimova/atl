@@ -19,10 +19,12 @@ public class StudentRegister {
     }
 
     public void addStudent(Student student){
-        students.add(student);
-        System.out.println(student+" elave olundu");
+        if(students.add(student)){
+        System.out.println(student + " elave olundu");
+    } else {
+            System.out.println("Bu telebe movcuddur: " + student);
+        }
     }
-
     public String studentsSearch(int id) throws NotFoundException{
         for (Student student : students) {
             if (student.getId().equals(id)) {

@@ -3,6 +3,7 @@ package Academy;
 public class Student extends Academy{
     private int  studentID;
     private String course;
+    private String studentName;
 
 
     public void study(){
@@ -23,11 +24,22 @@ public class Student extends Academy{
         this.studentID = studentID;
     }
 
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
     public String getCourse() {
         return course;
     }
 
     public void setCourse(String course) {
         this.course = course;
+
     }
+
+
 }

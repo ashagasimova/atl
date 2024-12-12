@@ -13,6 +13,7 @@ public class MainClass2 {
         audi.start();
         audi.stop();
         audi.headLights();
+        audi.specialAudi();
 
         Toyota toyota = new Toyota("Camry", 2020, "black" , 90000);
         toyota.printCars();

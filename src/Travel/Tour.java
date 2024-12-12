@@ -11,7 +11,7 @@ public class Tour {
         this.tourId = tourId;
         this.tourName = tourName;
         this.price = price;
-        this.isReserved = true;
+        this.isReserved = false;
         this.tourPackage = tourPackage;
     }
 
@@ -57,17 +57,17 @@ public class Tour {
 
 
     public void reserveTour(){
-        if (isReserved){
+        if (!isReserved){
             System.out.println("Rezerv olundu " + getTourName());
-            isReserved=false;
+            isReserved=true;
         } else {
             System.out.println("Yer qalmayib");
         }
     }
 
     public void cancelReserve(){
-        if (!isReserved){
-            isReserved=true;
+        if (isReserved){
+            isReserved=false;
             System.out.println("Reserviniz legv olundu");
         }else {
             System.out.println("Bele bir reserv yoxdur!");
@@ -76,7 +76,7 @@ public class Tour {
 
     public void displayInfo(){
         System.out.println("Tour ID: " + tourId + " Tourun adi: " + tourName + "Tourun qiymeti: "+
-                price + "Reseerv secimi: " + (isReserved?"Artiq Reserv olunub" : "Reserv ede bilersiniz") +
+                price + "$. Reseerv secimi: " + (isReserved?" Artiq Reserv olunub" : " Reserv ede bilersiniz") +
                 "Tourun tipi: " + tourPackage);
     }
 

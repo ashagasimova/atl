@@ -1,16 +1,18 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class task12 {
     public static void main(String[] args) {
-            System.out.print("Iki reqemli eded daxil edin: ");
-            Scanner scanner = new Scanner(System.in);
-            int eded = scanner.nextInt();
-            if (eded > 9 && eded < 100) {
-                System.out.println((eded / 10) + " " + (eded % 10));
-            } else {
-                System.out.println("eded iki reqemli deyil");
-
+        int[] arr = new int[5];
+        Scanner scanner = new Scanner(System.in);
+        arr[0] = scanner.nextInt();
+        arr[1] = scanner.nextInt();
+        arr[2] = scanner.nextInt();
+        arr[3] = scanner.nextInt();
+        arr[4] = scanner.nextInt();
+        System.out.println(Arrays.toString(arr));
             }
         }
-    }
+
+
 

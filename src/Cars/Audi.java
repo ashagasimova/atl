@@ -11,5 +11,10 @@ public class Audi extends Car{
         System.out.println("Matrix LED Headlights");
     }
 
+    public void specialAudi(){
+        headLights();
+
+    }
+
     }
 

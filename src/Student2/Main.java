@@ -13,6 +13,7 @@ public class Main {
         studentRegister.addStudent(student2);
         studentRegister.addStudent(student3);
         studentRegister.addStudent(student4);
+        studentRegister.addStudent(student4);
         System.out.println();
 
         try {

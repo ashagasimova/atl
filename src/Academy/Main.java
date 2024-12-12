@@ -13,6 +13,7 @@ public class Main {
         Student student = new Student(125987, "JavaPrg", academy.getName(), academy.getAddress());
         student.study();
 
+        Student student1 = new Student(1265448, "atl", "As" , "assf");
 
 
     }
