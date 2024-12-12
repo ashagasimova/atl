@@ -3,8 +3,6 @@ package News;
 public class Author {
     private String authorName;
     private String authorSname;
-//    private String category;
-
 
     public Author(String authorName, String authorSname) {
         this.authorName = authorName;

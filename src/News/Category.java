@@ -1,25 +1,24 @@
 package News;
 
-public class Category <T>{
-    private T categoryName;
+public class Category {
+    private String categoryName;
 
-    public Category(T categoryName) {
+    public Category(String categoryName) {
         this.categoryName = categoryName;
     }
 
-    public T getCategoryName() {
+    public String getCategoryName() {
         return categoryName;
     }
 
-    public void setCategoryName(T categoryName) {
+    public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
 
     @Override
     public String toString() {
         return "Category{" +
-                "categoryName=" + categoryName +
+                "categoryName='" + categoryName + '\'' +
                 '}';
     }
-
 }
