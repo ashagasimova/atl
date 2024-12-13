@@ -17,18 +17,20 @@ public class Main {
 
 
         News<Category, Author> news1 = new News<>("Daily News",
-                category1, author1, "10-10-2024");
+                category1, author1,LocalDate.of(2024,12,12));
         News<Category, Author> news2 = new News<>("Update News",
-                category2, author2, "11-12-2024");
+                category2, author2,LocalDate.of(2024,12,10));
         News<Category, Author> news3 = new News<>("Country News",
-                category3, author3, "12-12-2024");
+                category3, author3,LocalDate.of(2024,12,11));
 
         List<News> newsList = new ArrayList<>();
         newsList.add(news1);
         newsList.add(news2);
         newsList.add(news3);
 
-        System.out.println(newsList);
+       news1.getInfo();
+       news2.getInfo();
+       news3.getInfo();
 
     }
 

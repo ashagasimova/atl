@@ -2,6 +2,7 @@ package News;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class News <T, U> {
     private String newsName;
@@ -9,12 +10,19 @@ public class News <T, U> {
     private U author;
     private LocalDate publishDate;
 
-    public News(String newsName, T category, U author, String
-            publishDate) {
+    public News(String newsName, T category, U author, LocalDate publishDate) {
         this.newsName = newsName;
         this.category = category;
         this.author = author;
-        this.publishDate = LocalDate.parse(publishDate, DateTimeFormatter.ofPattern("MM-dd-yyyy"));
+        this.publishDate = publishDate;
+    }
+    public String getFormatter(){
+        return publishDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    }
+
+    public void getInfo(){
+        System.out.println(" News name: " + newsName + " \n Category: " + category +
+                "\n Author: " + author + " \n Publish date: " + publishDate );
     }
 
     public String getNewsName() {
@@ -55,7 +63,7 @@ public class News <T, U> {
                 "newsName='" + newsName + '\'' +
                 ", category=" + category +
                 ", author=" + author +
-                ", publishDate=" + publishDate +
+                ", publishDate=" + getFormatter() +
                 '}';
     }
 }
