@@ -3,6 +3,7 @@ package Comp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -14,10 +15,14 @@ public class Main {
         List<Student> myList = Arrays.asList(student1, student2, student3);
 
         System.out.println(myList);
-//        Collections.sort(myList);
+        Collections.sort(myList);
+        System.out.println(myList);
+
+//        Collections.sort(myList, new Comparator());
 //        System.out.println(myList);
 
-        Collections.sort(myList, new Comparator());
+        Collections.sort(myList, StudentComparator.comparatorForId());
+
         System.out.println(myList);
     }
 }
