@@ -20,5 +20,7 @@ public class Task2 {
                 .toList().forEach(System.out::println);
 
 
+
+
     }
 }
