@@ -10,9 +10,17 @@ public class Task5 {
 
         List <String> myList = List.of("Apple", "Banana", "Cherry", "Apricot", "Grapefruit");
 
-        myList.stream().map(n->n.split(""))
-                .toList()
-               .forEach(a -> System.out.println(Arrays.toString(a)));
+
+        List<String> result = myList.stream()
+                .flatMap(a->Arrays.stream(a.split("")))
+                .toList();
+
+        System.out.println(result);
+
+
+//        myList.stream().map(n->n.split(""))
+//                .toList()
+//               .forEach(a -> System.out.println(Arrays.toString(a)));
 
     }
 }

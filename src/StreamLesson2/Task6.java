@@ -13,7 +13,14 @@ public class Task6 {
                 List.of(5,12,8,9,7),
                 List.of(8,14,6,9,7,10));
 
-        myList.stream().map(n->n.stream().toList())
-                .forEach(System.out::println);
+
+        List<List<Integer>> result = myList.stream()
+//                .flatMap(n->Arrays.stream(""))
+                .toList();
+
+        System.out.println(result);
+
+//        myList.stream().map(n->n.stream().toList())
+//                .forEach(System.out::println);
     }
 }
