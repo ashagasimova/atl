@@ -1,37 +1,27 @@
 package StreamLEesson;
 
-import Manager.Employee;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
 
-        Customer cust1 = new Customer("Ayan", 560);
-        Customer cust2 = new Customer("Aykhan", 460);
-        Customer cust3 = new Customer("Banu", 340);
-        Customer cust4 = new Customer("Inci", 200);
-        Customer cust5 = new Customer("Umid", 880);
+      Phone p1 = new Phone(994513654);
+        Phone p2 = new Phone(994516921);
+        Phone p3 = new Phone(994963247);
+        Phone p4 = new Phone(994535496);
 
-        List <Customer> myList = Arrays.asList(cust1, cust2, cust3, cust4, cust5);
-        System.out.println(myList);
 
-        //List <Customer> str = myList.stream().filter(x -> x.getDebt()>350).toList();
-        List <Customer> str = myList.stream().filter(x -> x.getDebt()>350)
-                .peek(x -> x.setDebt(x.getDebt()+50))
-                .toList();
+        Person person1 = new Person("Ayan" , new ArrayList<>(Arrays.asList(p1)));
+        Person person2 = new Person("Aykhan" , new ArrayList<>(Arrays.asList(p2,p3)));
+        Person person3 = new Person("Banu" , new ArrayList<>(Arrays.asList(p4)));
 
-        for (Customer c : str){
-            System.out.println(c);
-        }
+         List<Person> mylist = List.of(person1, person2, person3);
+
+         mylist.stream().flatMap(l->l.getNumbers()
+                         .stream()).map(l->l.getPhoneNumber())
+                         .forEach(System.out::println);
 
     }
-
-
-
-
-
 }
